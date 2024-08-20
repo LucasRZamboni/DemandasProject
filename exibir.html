@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exibir Demandas</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/exibir.css" />
+  </head>
+  <body>
+    <div class="container">
+      <a href="index.html" class="voltar">Voltar</a>
+      <p id="edit-message"></p>
+      <h1 class="title">Demandas cadastradas</h1>
+
+      <div id="demandas-container"></div>
+
+      <!-- Modal para edição de status -->
+      <div id="edit-modal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <h2>Editar Status da Demanda</h2>
+          <form id="edit-status-form">
+            <input type="hidden" id="edit-id" />
+            <label for="edit-status">Novo Status:</label>
+            <select id="edit-status" name="edit-status" required>
+              <option value="Enviado">Enviado</option>
+              <option value="Verificando">Verificando</option>
+              <option value="Corrigido">Corrigido</option>
+            </select>
+            <button type="submit" class="salvar">Salvar</button>
+          </form>
+          <!-- <p id="edit-message"></p> -->
+        </div>
+      </div>
+
+      <!-- Modal para edição de outros itens -->
+      <div id="edit-other-modal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <h2>Editar Demanda</h2>
+          <form id="edit-other-form">
+            <input type="hidden" id="edit-other-id" />
+            <label for="edit-other-problemaResumido">Problema Resumido:</label>
+            <input type="text" id="edit-other-problemaResumido" required />
+
+            <label for="edit-other-email">E-mail:</label>
+            <input type="email" id="edit-other-email" required />
+
+            <label for="edit-other-servidor">Servidor:</label>
+            <select id="edit-other-servidor" required>
+              <option value="AL">AL</option>
+              <option value="SP">SP</option>
+              <option value="SC">SC</option>
+              <option value="Sastracker">Sastracker</option>
+              <option value="Alfa">Alfa</option>
+              <option value="TL">TL</option>
+            </select>
+
+            <label for="edit-other-descricao">Descrição do Problema:</label>
+            <textarea id="edit-other-descricao" required></textarea>
+
+            <label for="edit-other-imagem">Imagem (opcional):</label>
+            <input type="file" id="edit-other-imagem" />
+
+            <button type="submit" class="salvar">Salvar</button>
+          </form>
+          <!-- <p id="edit-message"></p> -->
+        </div>
+      </div>
+
+      <!-- Modal para confirmação de exclusão -->
+      <div id="delete-modal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <h2>Confirmar Exclusão</h2>
+          <div class="buttons">
+            <button id="confirm-delete-btn" class="confirm">Confirmar</button>
+            <button id="cancel-delete-btn" class="cancel">Cancelar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="javascript/exibir.js"></script>
+  </body>
+</html>

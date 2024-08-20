@@ -1,0 +1,33 @@
+.container {
+  justify-content: unset;
+}
+
+h1 {
+  text-align: center;
+  width: 100%;
+  padding: 200px 0;
+  color: var(--font-color);
+}
+.div {
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+a {
+  color: var(--buttons-color);
+  font-weight: 600;
+  border: 2px solid var(--buttons-color);
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  background: var(--font-color);
+  text-decoration: none;
+}
+
+a:hover {
+  background: var(--buttons-color);
+  color: var(--font-color);
+}

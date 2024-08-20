@@ -1,0 +1,74 @@
+/* Estilo do contêiner */
+.container{
+    width: 100%;
+    min-height: 100vh;
+}
+#demandas-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3%;
+}
+.title{
+    margin-bottom: 40px;
+    color: var(--font-color);
+    text-transform: uppercase;
+}
+/* Estilo dos cartões */
+.card {
+    box-shadow: 0 0 5px white;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background: var(--background-2);
+    border: 2px solid var(--buttons-color);
+    max-width: 32%;
+    height: fit-content;
+}
+.card h2{
+    color: var(--font-color-2);
+    text-align: center;
+    margin: 5px 20px 20px 20px;
+}
+.card p{
+    display: flex;
+    /* flex-direction: column; */
+    margin: 5px 0;
+    color: var(--font-color-2);
+}
+.card p span{
+    font-weight: 600;
+    color: var(--buttons-color);
+    padding-right: 5px;
+}
+.card p .status{
+    font-weight: 400;
+    color: var(--font-color-2);
+}
+.confirm{
+    color: var(--color-success);
+    background: var(--background-2);
+    border: 2px solid var(--border-success);
+}
+.cancel{
+    color: var(--color-error);
+    background: var(--background-2);
+    border: 2px solid var(--border-error);
+}
+.confirm,
+.cancel{
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.confirm:hover{
+    color: var(--color-success);
+    background: var(--background-success);
+    border: 2px solid var(--border-success);
+}
+.cancel:hover{
+    color: var(--color-error);
+    background: var(--background-error);
+    border: 2px solid var(--border-error);
+}

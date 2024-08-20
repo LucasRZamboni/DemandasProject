@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registrar Demanda</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/cadastrar.css" />
+  </head>
+  <body>
+    <div class="container">
+      <p id="edit-message"></p>
+      <a href="index.html" class="voltar">Voltar</a>
+      <h1 class="title">Nova Demanda</h1>
+      <form id="demanda-form">
+        <label for="problemaResumido">Problema Resumido:</label>
+        <input
+          type="text"
+          id="problemaResumido"
+          name="problemaResumido"
+          required
+        />
+
+        <div class="form-control">
+            <div class="form-control-inside">
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-control-inside">
+          <label for="servidor">Servidor:</label>
+          <select id="servidor" name="servidor" required>
+            <option value="AL">AL</option>
+            <option value="SP">SP</option>
+            <option value="SC">SC</option>
+            <option value="Sastracker">Sastracker</option>
+            <option value="Alfa">Alfa</option>
+            <option value="TL">TL</option>
+          </select>
+        </div>
+        </div>
+        <label for="descricao">Descrição do Problema:</label>
+        <textarea id="descricao" name="descricao" rows="4" required></textarea>
+
+        <label for="imagem">Imagem (opcional):</label>
+        <input type="file" id="imagem" name="imagem" />
+
+        <label for="status">Status:</label>
+        <select id="status" name="status" required>
+          <option value="Cadastrada">Cadastrada</option>
+          <option value="Enviado">Enviado</option>
+          <option value="Verificando">Verificando</option>
+          <option value="Corrigido">Corrigido</option>
+        </select>
+
+        <button type="submit">Cadastrar</button>
+      </form>
+      
+    </div>
+
+    <script type="module" src="javascript/app.js"></script>
+  </body>
+</html>

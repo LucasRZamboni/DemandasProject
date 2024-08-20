@@ -1,0 +1,70 @@
+.title {
+  color: var(--font-color);
+  text-transform: uppercase;
+}
+
+form {
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.301);
+  padding: 20px;
+  margin-top: 20px;
+  width: 80%;
+  border: 2px solid var(--buttons-color);
+  background: var(--background-2);
+  max-width: 900px;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: 600;
+  color: var(--font-color-2);
+}
+.form-control {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1%;
+}
+.form-control-inside {
+  width: 69%;
+}
+.form-control-inside:nth-child(2){
+    width: 30%;
+}
+.form-control-inside:nth-child(2) select{
+    padding: 9px;
+}
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid var(--buttons-color);
+  border-radius: 4px;
+  outline: none;
+  color: var(--font-color-2);
+}
+
+#selected-value {
+  background: var(--buttons-color);
+}
+textarea {
+  resize: vertical;
+  max-height: 150px;
+}
+button {
+  color: var(--buttons-color);
+  font-weight: 600;
+  border: 2px solid var(--buttons-color);
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  background: var(--font-color);
+}
+
+button:hover {
+  background: var(--buttons-color);
+  color: var(--font-color);
+}
