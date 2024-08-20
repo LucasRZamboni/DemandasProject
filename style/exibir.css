@@ -4,7 +4,7 @@
     min-height: 100vh;
 }
 #demandas-container{
-    width: 100%;
+    width: 85%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
