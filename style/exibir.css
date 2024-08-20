@@ -9,6 +9,7 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 3%;
+overflow-y: scroll;
 }
 .title{
     margin-bottom: 40px;
