@@ -25,6 +25,7 @@ overflow-y: scroll;
     background: var(--background-2);
     border: 2px solid var(--buttons-color);
     max-width: 32%;
+    width: 32%;
     position: relative;
 }
 .card h2{
