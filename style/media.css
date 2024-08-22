@@ -1,0 +1,11 @@
+@media screen and (max-width: 768px){
+ #demandas-container{
+width: 90%;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+.card{
+width: 100%;
+}
