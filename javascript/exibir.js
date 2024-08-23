@@ -255,19 +255,33 @@ document
     event.preventDefault();
     const id = document.getElementById("edit-id").value;
     const status = document.getElementById("edit-status").value;
+    const messageElement = document.getElementById("edit-message");
+    
     try {
       await update(ref(db, "demandas/" + id), { status });
-      document.getElementById("edit-message").classList.add("success");
-      document.getElementById("edit-message").innerText =
-        "Status atualizado com sucesso!";
+      messageElement.classList.add("success");
+      messageElement.innerText = "Status atualizado com sucesso!";
       document.getElementById("edit-modal").style.display = "none";
       fetchDemandas(); // Atualiza a lista de demandas
+
+      // Configura o timer para ocultar a mensagem após 3 segundos (3000 milissegundos)
+      setTimeout(() => {
+        messageElement.innerText = ""; // Limpa o texto da mensagem
+        messageElement.classList.remove("success");
+      }, 3000);
+
     } catch (error) {
-      document.getElementById("edit-message").classList.add("error");
-      document.getElementById("edit-message").innerText =
-        "Erro ao atualizar status: " + error.message;
+      messageElement.classList.add("error");
+      messageElement.innerText = "Erro ao atualizar status: " + error.message;
+
+      // Configura o timer para ocultar a mensagem após 5 segundos (5000 milissegundos)
+      setTimeout(() => {
+        messageElement.innerText = ""; // Limpa o texto da mensagem
+        messageElement.classList.remove("error");
+      }, 5000);
     }
   });
+
 
 // Função para salvar alterações nos outros itens da demanda
 document
@@ -275,13 +289,12 @@ document
   .addEventListener("submit", async (event) => {
     event.preventDefault();
     const id = document.getElementById("edit-other-id").value;
-    const problemaResumido = document.getElementById(
-      "edit-other-problemaResumido"
-    ).value;
+    const problemaResumido = document.getElementById("edit-other-problemaResumido").value;
     const email = document.getElementById("edit-other-email").value;
     const servidor = document.getElementById("edit-other-servidor").value;
     const descricao = document.getElementById("edit-other-descricao").value;
     const imagemFile = document.getElementById("edit-other-imagem").files[0];
+    const messageElement = document.getElementById("edit-message");
 
     try {
       let imagemUrl = "";
@@ -299,31 +312,57 @@ document
         descricao,
         imagemUrl,
       });
-      document.getElementById("edit-message").classList.add("success");
-      document.getElementById("edit-message").innerText =
-        "Demanda atualizada com sucesso!";
+      messageElement.classList.add("success");
+      messageElement.innerText = "Demanda atualizada com sucesso!";
       document.getElementById("edit-other-modal").style.display = "none";
       fetchDemandas(); // Atualiza a lista de demandas
+
+      // Configura o timer para ocultar a mensagem após 3 segundos (3000 milissegundos)
+      setTimeout(() => {
+        messageElement.innerText = ""; // Limpa o texto da mensagem
+        messageElement.classList.remove("success");
+      }, 3000);
+
     } catch (error) {
-      document.getElementById("edit-message").classList.add("error");
-      document.getElementById("edit-message").innerText =
-        "Erro ao atualizar demanda: " + error.message;
+      messageElement.classList.add("error");
+      messageElement.innerText = "Erro ao atualizar demanda: " + error.message;
+
+      // Configura o timer para ocultar a mensagem após 5 segundos (5000 milissegundos)
+      setTimeout(() => {
+        messageElement.innerText = ""; // Limpa o texto da mensagem
+        messageElement.classList.remove("error");
+      }, 5000);
     }
   });
 
+
+
 // Função para excluir uma demanda
 async function handleDeleteConfirm(id) {
+  const messageElement = document.getElementById("edit-message");
+
   try {
     await remove(ref(db, "demandas/" + id));
-    document.getElementById("edit-message").classList.add("success");
-    document.getElementById("edit-message").innerText =
-      "Demanda excluída com sucesso!";
+    messageElement.classList.add("success");
+    messageElement.innerText = "Demanda excluída com sucesso!";
     document.getElementById("delete-modal").style.display = "none";
     fetchDemandas(); // Atualiza a lista de demandas
+
+    // Configura o timer para ocultar a mensagem após 3 segundos (3000 milissegundos)
+    setTimeout(() => {
+      messageElement.innerText = ""; // Limpa o texto da mensagem
+      messageElement.classList.remove("success");
+    }, 3000);
+
   } catch (error) {
-    document.getElementById("edit-message").classList.add("error");
-    document.getElementById("edit-message").innerText =
-      "Erro ao excluir demanda: " + error.message;
+    messageElement.classList.add("error");
+    messageElement.innerText = "Erro ao excluir demanda: " + error.message;
+
+    // Configura o timer para ocultar a mensagem após 5 segundos (5000 milissegundos)
+    setTimeout(() => {
+      messageElement.innerText = ""; // Limpa o texto da mensagem
+      messageElement.classList.remove("error");
+    }, 5000);
   }
 }
 

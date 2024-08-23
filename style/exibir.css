@@ -10,11 +10,11 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 2%;
-  overflow-y: scroll;
+  overflow-y: scroll; 
 }
-.title {
+h1.title {
   position: relative;
-  margin-bottom: 40px;
+  padding: 40px 0;
   color: var(--font-color);
   text-transform: uppercase;
   text-align: center;
@@ -33,12 +33,15 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  /* min-height: fit-content; */
+  min-height: 300px;
 }
 .card h2 {
   color: var(--font-color-2);
   text-align: center;
   height: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .card .conteudo{
   height: 67.5%;
@@ -51,7 +54,7 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  margin-top: 2.5%;
+  padding: 2.5% 0;
 }
 .card .buttons-container button{
   max-width: 100px;

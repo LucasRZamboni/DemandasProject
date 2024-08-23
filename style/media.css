@@ -3,16 +3,18 @@
     width: 90%;
   }
   .card {
-    width: 100%;
+    width: 90%;
     max-width: 90%;
   }
-  .title {
+  h1.title {
     max-width: 50%;
+
+  }
+  .card h2{
+    font-size: 1.5rem;
   }
   #edit-message{
-
     top: 90px;
-
 }
 
 }
@@ -20,5 +22,10 @@
   .card {
     width: 40%;
     max-width: 40%;
+  }
+}
+@media screen and (min-width: 1800px){
+  .card .conteudo{
+    width: 80%;
   }
 }
