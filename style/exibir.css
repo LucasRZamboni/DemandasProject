@@ -1,76 +1,78 @@
 /* Estilo do contêiner */
-.container{
-    width: 100%;
-    min-height: 100vh;
+.container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
 }
-#demandas-container{
-    width: 85%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 3%;
-overflow-y: scroll;
+#demandas-container {
+  width: 85%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2%;
+  overflow-y: scroll;
 }
-.title{
-    margin-bottom: 40px;
-    color: var(--font-color);
-    text-transform: uppercase;
+.title {
+  position: relative;
+  margin-bottom: 40px;
+  color: var(--font-color);
+  text-transform: uppercase;
+  text-align: center;
 }
 /* Estilo dos cartões */
 .card {
-    box-shadow: 0 0 5px white;
-    border-radius: 5px;
-    padding: 15px;
-    margin-bottom: 20px;
-    background: var(--background-2);
-    border: 2px solid var(--buttons-color);
-    max-width: 32%;
-    width: 32%;
-    position: relative;
+  box-shadow: 0 0 5px white;
+  border-radius: 8px;
+  padding: 15px;
+  background: var(--background-2);
+  border: 2px solid var(--buttons-color);
+  max-width: 49%;
+  width: 49%;
+  position: relative;
 }
-.card h2{
-    color: var(--font-color-2);
-    text-align: center;
-    margin: 5px 20px 20px 20px;
+.card h2 {
+  color: var(--font-color-2);
+  text-align: center;
+  margin: 5px 20px 20px 20px;
 }
-.card p{
-    display: flex;
-    /* flex-direction: column; */
-    margin: 5px 0;
-    color: var(--font-color-2);
+.card p {
+  display: flex;
+  /* flex-direction: column; */
+  margin: 5px 0;
+  color: var(--font-color-2);
 }
-.card p span{
-    font-weight: 600;
-    color: var(--buttons-color);
-    padding-right: 5px;
+.card p span {
+  font-weight: 600;
+  color: var(--buttons-color);
+  padding-right: 5px;
 }
-.card p .status{
-    font-weight: 400;
-    color: var(--font-color-2);
+.card p .status {
+  font-weight: 400;
+  color: var(--font-color-2);
 }
-.confirm{
-    color: var(--color-success);
-    background: var(--background-2);
-    border: 2px solid var(--border-success);
+.confirm {
+  color: var(--color-success);
+  background: var(--background-2);
+  border: 2px solid var(--border-success);
 }
-.cancel{
-    color: var(--color-error);
-    background: var(--background-2);
-    border: 2px solid var(--border-error);
+.cancel {
+  color: var(--color-error);
+  background: var(--background-2);
+  border: 2px solid var(--border-error);
 }
 .confirm,
-.cancel{
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
+.cancel {
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
 }
-.confirm:hover{
-    color: var(--color-success);
-    background: var(--background-success);
-    border: 2px solid var(--border-success);
+.confirm:hover {
+  color: var(--color-success);
+  background: var(--background-success);
+  border: 2px solid var(--border-success);
 }
-.cancel:hover{
-    color: var(--color-error);
-    background: var(--background-error);
-    border: 2px solid var(--border-error);
+.cancel:hover {
+  color: var(--color-error);
+  background: var(--background-error);
+  border: 2px solid var(--border-error);
 }

@@ -6,13 +6,15 @@
     <title>Exibir Demandas</title>
     <link rel="stylesheet" href="style/style.css" />
     <link rel="stylesheet" href="style/exibir.css" />
-<link rel="stylesheet" href="style/media.css" />
+    <link rel="stylesheet" href="style/media.css" />
   </head>
   <body>
     <div class="container">
       <a href="index.html" class="voltar">Voltar</a>
-      <p id="edit-message"></p>
+      
       <h1 class="title">Demandas cadastradas</h1>
+
+      <p id="edit-message" class=""></p>
 
       <div id="demandas-container"></div>
 
@@ -25,6 +27,7 @@
             <input type="hidden" id="edit-id" />
             <label for="edit-status">Novo Status:</label>
             <select id="edit-status" name="edit-status" required>
+              <option value="Cadastrada">Cadastrada</option>
               <option value="Enviado">Enviado</option>
               <option value="Verificando">Verificando</option>
               <option value="Corrigido">Corrigido</option>

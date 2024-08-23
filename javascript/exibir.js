@@ -4,7 +4,6 @@ import { getStorage, ref as storageRef, uploadBytes, getDownloadURL } from "http
 
 // Configurações do Firebase
 
-// Configurações do Firebase
 const firebaseConfig = {
     apiKey: "AIzaSyC5A5vvzMLaIFXZ6E-LFF4iKLTjCR4prCo",
     authDomain: "demandasproject.firebaseapp.com",
@@ -41,9 +40,11 @@ export async function fetchDemandas() {
                     <p><span>Descrição:</span> ${data.descricao}</p>
                     <p><span>Status:</span> <span class="status">${data.status}</span></p>
                     <p><span>Imagem:</span> ${data.imagemUrl ? `<a href="${data.imagemUrl}" target="_blank">Visualizar Imagem</a>` : 'Nenhuma imagem enviada'}</p>
-                    <button data-id="${id}" class="edit-status-btn editar">Status</button>
-                    <button data-id="${id}" class="edit-other-btn demanda">Demanda</button>
-                    <button data-id="${id}" class="delete-btn excluir">Excluir</button>
+                     
+                        <button data-id="${id}" class="edit-status-btn editar">Status</button>
+                        <button data-id="${id}" class="edit-other-btn demanda">Demanda</button>
+                        <button data-id="${id}" class="delete-btn excluir">Excluir</button>
+                   
                 `;
                 demandasContainer.appendChild(card);
             }
@@ -69,6 +70,7 @@ export async function fetchDemandas() {
 function handleEditStatusClick(event) {
     const id = event.target.getAttribute('data-id');
     document.getElementById('edit-id').value = id;
+    console.log(id);
     const statusElement = event.target.parentElement.querySelector('.status');
     document.getElementById('edit-status').value = statusElement.textContent;
     document.getElementById('edit-modal').style.display = 'flex';
@@ -110,6 +112,7 @@ document.querySelectorAll('.close-btn').forEach(button => {
         }
     });
 });
+
 // Função para salvar alterações no status
 document.getElementById('edit-status-form').addEventListener('submit', async (event) => {
     event.preventDefault();
