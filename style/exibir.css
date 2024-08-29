@@ -104,6 +104,11 @@ h1.title {
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
+.card .conteudo p span.usuarios{
+ overflow-x: scroll;
+ scrollbar-width: none;
+  -ms-overflow-style: none;
+}
 
 .card .conteudo p span.description::-webkit-scrollbar {
   display: none;
