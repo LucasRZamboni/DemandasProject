@@ -122,6 +122,7 @@ const storage = getStorage(app);
 //     (document.getElementById("delete-modal").style.display = "none");
 // }
 
+
 export async function fetchDemandas() {
   const demandasContainer = document.getElementById("demandas-container");
   const demandasRef = ref(db, "demandas");
@@ -172,6 +173,7 @@ export async function fetchDemandas() {
       document.querySelectorAll(".delete-btn").forEach((button) => {
         button.addEventListener("click", handleDeleteClick);
       });
+
     } else {
       demandasContainer.innerHTML = "<p>Nenhuma demanda encontrada.</p>";
     }
@@ -366,5 +368,34 @@ async function handleDeleteConfirm(id) {
   }
 }
 
-// Chama a função para buscar demandas quando a página carrega
-fetchDemandas();
+// // Chama a função para buscar demandas quando a página carrega
+// fetchDemandas();
+
+
+// Função para monitorar o campo de busca em tempo real e filtrar as demandas
+document.getElementById("search-input").addEventListener("input", function (event) {
+  const keyword = event.target.value.toLowerCase(); // Obtém a palavra-chave em minúsculas
+  filterDemandas(keyword);
+});
+
+function filterDemandas(keyword) {
+  const cards = document.querySelectorAll(".card");
+
+  cards.forEach(card => {
+    const title = card.querySelector("h2").textContent.toLowerCase(); // Título da demanda
+    const problem = card.querySelector("p:nth-of-type(1)").textContent.toLowerCase(); // Problema resumido
+    const email = card.querySelector("p:nth-of-type(2)").textContent.toLowerCase(); // E-mail do usuário
+    const server = card.querySelector("p:nth-of-type(3)").textContent.toLowerCase(); // Servidor
+    const description = card.querySelector(".description").textContent.toLowerCase(); // Descrição
+
+    // Verifica se a palavra-chave aparece em algum dos campos
+    if (title.includes(keyword) || problem.includes(keyword) || email.includes(keyword) || server.includes(keyword) || description.includes(keyword)) {
+      card.style.display = ""; // Mostra o card
+    } else {
+      card.style.display = "none"; // Esconde o card
+    }
+  });
+}
+
+// Inicializa a busca de demandas ao carregar a página
+document.addEventListener("DOMContentLoaded", fetchDemandas);

@@ -19,7 +19,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
-  transition: all 0.1s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 body {
   width: 100%;
@@ -44,6 +44,7 @@ body {
   border: 2px solid var(--buttons-color);
   padding: 8px 15px;
   border-radius: 5px;
+  z-index: 10000;
 }
 .voltar:hover {
   background: var(--buttons-color);

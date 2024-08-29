@@ -1,14 +1,46 @@
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 433px) {
   #demandas-container {
     width: 90%;
+    margin-top: 120px;
   }
   .card {
     width: 90%;
     max-width: 90%;
   }
   h1.title {
-    max-width: 50%;
+    margin-top: 10px;
+    max-width: 80%;
+    font-size: 1.7rem;
+  }
+}
 
+@media screen and (max-width: 568px) {
+  #demandas-container {
+    width: 90%;
+    /* margin-top: 120px; */
+  }
+  .card {
+    width: 90%;
+    max-width: 90%;
+  }
+  h1.title {
+    margin-top: 10px;
+    max-width: 80%;
+    font-size: 1.7rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  #demandas-container {
+    width: 90%;
+    /* margin-top: 140px; */
+  }
+  .card {
+    width: 90%;
+    max-width: 90%;
+  }
+  h1.title {
+    margin-top: 10px;
+    max-width: 80%;
   }
   .card h2{
     font-size: 1.5rem;
