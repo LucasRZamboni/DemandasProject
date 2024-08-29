@@ -142,7 +142,7 @@ export async function fetchDemandas() {
             <h2>Demanda #${data.numero}</h2>
             <div class="conteudo">
             <p><span>Problema:</span> ${data.problemaResumido}</p>
-            <p><span>Usuário:</span> ${data.email}</p>
+            <p><span>Usuário:</span> <span class="usuarios">${data.email}</span></p>
             <p><span>Servidor:</span> ${data.servidor}</p>
             <p><span>Descrição:</span> <span class=description>${data.descricao} </span></p>
             <p><span>Status:</span> <span class="status ${statusClass}">${
