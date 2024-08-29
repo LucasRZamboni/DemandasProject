@@ -97,7 +97,7 @@ h1.title {
   padding-right: 5px;
 }
 .card .conteudo p span.description {
-  color: black;
+  color: var(--font-color-2);
   font-weight: 400;
   max-height: 50px;
   overflow-y: scroll;
@@ -108,7 +108,7 @@ h1.title {
   overflow-x: scroll;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  color: black;
+  color: var(--font-color-2);
   font-weight: 400;
   max-width: 89%;
 }
