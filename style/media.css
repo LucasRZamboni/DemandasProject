@@ -1,11 +1,10 @@
 @media screen and (max-width: 433px) {
   #demandas-container {
-    width: 90%;
+    width: 95%;
     margin-top: 120px;
   }
   .card {
-    width: 90%;
-    max-width: 90%;
+    width: 100%;
   }
   h1.title {
     margin-top: 10px;
@@ -16,12 +15,11 @@
 
 @media screen and (max-width: 568px) {
   #demandas-container {
-    width: 90%;
+    width: 95%;
     /* margin-top: 120px; */
   }
   .card {
-    width: 90%;
-    max-width: 90%;
+    width: 100%;
   }
   h1.title {
     margin-top: 10px;
@@ -31,7 +29,7 @@
 }
 @media screen and (max-width: 768px) {
   #demandas-container {
-    width: 90%;
+    width: 95%;
     /* margin-top: 140px; */
   }
   .card {
