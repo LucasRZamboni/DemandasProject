@@ -73,7 +73,9 @@ export async function fetchDemandas() {
             <h2>Demanda #${data.numero}</h2>
             <div class="conteudo">
             <p><span>Registrado por:</span> ${
-              data.usuario ? data.usuario : "Sem dados"
+              data.usuario 
+              ? data.usuario 
+              : "Sem dados"
             }</p>
             <p><span>Problema:</span> ${data.problemaResumido}</p>
             <p><span>Usuário:</span> <span class=usuarios>${
@@ -166,7 +168,7 @@ function handleEditOtherClick(event) {
   document.getElementById("edit-other-descricao").value = card
     .querySelector("p:nth-of-type(5)")
     .textContent.split(": ")[1];
-    
+
   document.getElementById("edit-other-modal").style.display = "flex";
 }
 
@@ -235,6 +237,7 @@ document
   .addEventListener("submit", async (event) => {
     event.preventDefault();
     const id = document.getElementById("edit-other-id").value;
+    const usuario = document.getElementById("edit-other-usuario").value;
     const problemaResumido = document.getElementById(
       "edit-other-problemaResumido"
     ).value;
@@ -254,6 +257,7 @@ document
       }
 
       await update(ref(db, "demandas/" + id), {
+        usuario,
         problemaResumido,
         email,
         servidor,
@@ -326,15 +330,21 @@ function filterDemandas(keyword) {
 
   cards.forEach((card) => {
     const title = card.querySelector("h2").textContent.toLowerCase(); // Título da demanda
-    const problem = card
+    const user = card
       .querySelector("p:nth-of-type(1)")
+      .textContent.toLowerCase(); // Usuario que cadastrou a demanda
+    const problem = card
+      .querySelector("p:nth-of-type(2)")
       .textContent.toLowerCase(); // Problema resumido
     const email = card
-      .querySelector("p:nth-of-type(2)")
+      .querySelector("p:nth-of-type(3)")
       .textContent.toLowerCase(); // E-mail do usuário
     const server = card
-      .querySelector("p:nth-of-type(3)")
+      .querySelector("p:nth-of-type(4)")
       .textContent.toLowerCase(); // Servidor
+    const stats = card
+      .querySelector("p:nth-of-type(5)")
+      .textContent.toLowerCase(); // Status
     const description = card
       .querySelector(".description")
       .textContent.toLowerCase(); // Descrição
@@ -342,9 +352,11 @@ function filterDemandas(keyword) {
     // Verifica se a palavra-chave aparece em algum dos campos
     if (
       title.includes(keyword) ||
+      user.includes(keyword) ||
       problem.includes(keyword) ||
       email.includes(keyword) ||
       server.includes(keyword) ||
+      stats.includes(keyword) ||
       description.includes(keyword)
     ) {
       card.style.display = ""; // Mostra o card
