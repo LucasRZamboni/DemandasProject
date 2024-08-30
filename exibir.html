@@ -12,9 +12,16 @@
     <div class="container">
       <a href="index.html" class="voltar">Voltar</a>
 
-      <input type="text" id="search-input" class="pesquisa" placeholder="Buscar problema">
-      
-      <h1 class="title">Demandas cadastradas <span id="totalDemandas"></span></h1>
+      <input
+        type="text"
+        id="search-input"
+        class="pesquisa"
+        placeholder="Buscar problema"
+      />
+
+      <h1 class="title">
+        Demandas cadastradas <span id="totalDemandas"></span>
+      </h1>
 
       <p id="edit-message" class=""></p>
 
@@ -40,7 +47,6 @@
         </div>
       </div>
 
-      
       <!-- Modal para edição de outros itens -->
       <div id="edit-other-modal" class="modal">
         <div class="modal-content">
@@ -48,6 +54,10 @@
           <h2>Editar Demanda</h2>
           <form id="edit-other-form">
             <input type="hidden" id="edit-other-id" />
+
+            <label for="edit-other-usuario">Usuário:</label>
+            <input type="text" id="edit-other-usuario" required />
+
             <label for="edit-other-problemaResumido">Problema Resumido:</label>
             <input type="text" id="edit-other-problemaResumido" required />
 

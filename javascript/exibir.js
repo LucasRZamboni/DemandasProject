@@ -151,18 +151,22 @@ function handleEditOtherClick(event) {
   const id = event.target.getAttribute("data-id");
   document.getElementById("edit-other-id").value = id;
   const card = event.target.closest(".card");
-  document.getElementById("edit-other-problemaResumido").value = card
+  document.getElementById("edit-other-usuario").value = card
     .querySelector("p:nth-of-type(1)")
     .textContent.split(": ")[1];
-  document.getElementById("edit-other-email").value = card
+  document.getElementById("edit-other-problemaResumido").value = card
     .querySelector("p:nth-of-type(2)")
     .textContent.split(": ")[1];
-  document.getElementById("edit-other-servidor").value = card
+  document.getElementById("edit-other-email").value = card
     .querySelector("p:nth-of-type(3)")
     .textContent.split(": ")[1];
-  document.getElementById("edit-other-descricao").value = card
+  document.getElementById("edit-other-servidor").value = card
     .querySelector("p:nth-of-type(4)")
     .textContent.split(": ")[1];
+  document.getElementById("edit-other-descricao").value = card
+    .querySelector("p:nth-of-type(5)")
+    .textContent.split(": ")[1];
+    
   document.getElementById("edit-other-modal").style.display = "flex";
 }
 
