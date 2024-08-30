@@ -22,13 +22,14 @@ const storage = getStorage(app);
 document.getElementById('demanda-form').addEventListener('submit', async (event) => {
     event.preventDefault();
 
+    const usuario = document.getElementById('usuario').value;
     const problemaResumido = document.getElementById('problemaResumido').value;
     const email = document.getElementById('email').value;
     const servidor = document.getElementById('servidor').value;
     const descricao = document.getElementById('descricao').value;
     const imagemFile = document.getElementById('imagem').files[0];
-    const status = document.getElementById('status').value; // Novo campo para status
-    const numero = new Date().getTime(); // Usar timestamp como número da demanda
+    const status = document.getElementById('status').value;
+    const numero = new Date().getTime();
 
     let imagemUrl = "";
 
@@ -46,6 +47,7 @@ document.getElementById('demanda-form').addEventListener('submit', async (event)
 
     try {
         await set(ref(db, 'demandas/' + numero), {
+            usuario,
             descricao,
             email,
             imagemUrl, // URL da imagem no Firebase Storage
