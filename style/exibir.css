@@ -200,6 +200,7 @@ h1.title {
   font-weight: 500;
   border: 2px solid var(--buttons-color);
   padding: 10px;
+  border-radius: 5px;
 }
 .filtroContainer .filtro-control{
   display: flex;
@@ -228,6 +229,10 @@ input[type="checkbox"]:checked::before {
   color: var(--buttons-color);
   font-weight: 800;
 }
+.filtroContainer .filtro-control p{
+  display: flex;
+  align-items: center;
+}
 .filtroContainer .filtro-control:nth-child(3) input:checked{
   border-color: black;
 }
@@ -239,4 +244,9 @@ input[type="checkbox"]:checked::before {
 }
 .filtroContainer .filtro-control:nth-child(6) input:checked{
   border-color: green;
+}
+.filtroContainer #openFiltro{
+  font-size: 20px;
+  padding: 0;
+  cursor: pointer;
 }
