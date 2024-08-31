@@ -38,6 +38,7 @@ function contarCards() {
 
 export async function fetchDemandas() {
   const demandasContainer = document.getElementById("demandas-container");
+
   const demandasRef = ref(db, "demandas");
   try {
     const snapshot = await get(demandasRef);
@@ -73,9 +74,7 @@ export async function fetchDemandas() {
             <h2>Demanda #${data.numero}</h2>
             <div class="conteudo">
             <p><span>Registrado por:</span> ${
-              data.usuario 
-              ? data.usuario 
-              : "Sem dados"
+              data.usuario ? data.usuario : "Sem dados"
             }</p>
             <p><span>Problema:</span> ${data.problemaResumido}</p>
             <p><span>Usuário:</span> <span class=usuarios>${
@@ -94,6 +93,18 @@ export async function fetchDemandas() {
                 : "Nenhuma imagem enviada"
             }</p>
             
+            <p class="dataHoraCad">${
+              data.dataHora
+                ? new Date(data.dataHora).toLocaleString([], {
+                    year: "numeric",
+                    month: "2-digit",
+                    day: "2-digit",
+                    hour: "2-digit",
+                    minute: "2-digit",
+                  })
+                : ""
+            }</p>
+
             </div>
             <div class="buttons-container">
               <button data-id="${id}" class="edit-status-btn editar">Status</button>

@@ -29,6 +29,7 @@ document.getElementById('demanda-form').addEventListener('submit', async (event)
     const descricao = document.getElementById('descricao').value;
     const imagemFile = document.getElementById('imagem').files[0];
     const status = document.getElementById('status').value;
+    // const dataHora = document.getElementById('dataHora').value;
     const numero = new Date().getTime();
 
     let imagemUrl = "";
@@ -54,7 +55,8 @@ document.getElementById('demanda-form').addEventListener('submit', async (event)
             numero,
             problemaResumido,
             servidor,
-            status // Adiciona o status
+            status, // Adiciona o status
+            dataHora: new Date().toISOString()
         });
         document.getElementById('edit-message').classList.add ('success');
         document.getElementById('edit-message').innerText = 'Demanda registrada com sucesso!';
@@ -64,3 +66,4 @@ document.getElementById('demanda-form').addEventListener('submit', async (event)
         document.getElementById('edit-message').innerText = 'Erro ao registrar demanda: ' + error.message;
     }
 });
+

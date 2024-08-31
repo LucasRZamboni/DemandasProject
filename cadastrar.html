@@ -13,13 +13,8 @@
       <a href="index.html" class="voltar">Voltar</a>
       <h1 class="title">Nova Demanda</h1>
       <form id="demanda-form">
-        <label for="usuario">Usuário:</label>
-        <input
-          type="text"
-          id="usuario"
-          name="usuario"
-          required
-        />
+        <label for="usuario">Operado suporte:</label>
+            <input type="text" id="usuario" name="usuario" required />
         <label for="problemaResumido">Problema Resumido:</label>
         <input
           type="text"
@@ -29,21 +24,21 @@
         />
 
         <div class="form-control">
-            <div class="form-control-inside">
-          <label for="email">E-mail:</label>
-          <input type="text" id="email" name="email" required />
-        </div>
-        <div class="form-control-inside">
-          <label for="servidor">Servidor:</label>
-          <select id="servidor" name="servidor" required>
-            <option value="AL">AL</option>
-            <option value="SP">SP</option>
-            <option value="SC">SC</option>
-            <option value="Sastracker">Sastracker</option>
-            <option value="Alfa">Alfa</option>
-            <option value="TL">TL</option>
-          </select>
-        </div>
+          <div class="form-control-inside">
+            <label for="email">E-mail:</label>
+            <input type="text" id="email" name="email" required />
+          </div>
+          <div class="form-control-inside">
+            <label for="servidor">Servidor:</label>
+            <select id="servidor" name="servidor" required>
+              <option value="AL">AL</option>
+              <option value="SP">SP</option>
+              <option value="SC">SC</option>
+              <option value="Sastracker">Sastracker</option>
+              <option value="Alfa">Alfa</option>
+              <option value="TL">TL</option>
+            </select>
+          </div>
         </div>
         <label for="descricao">Descrição do Problema:</label>
         <textarea id="descricao" name="descricao" rows="4" required></textarea>
@@ -61,7 +56,6 @@
 
         <button type="submit">Cadastrar</button>
       </form>
-      
     </div>
 
     <script type="module" src="javascript/app.js"></script>
