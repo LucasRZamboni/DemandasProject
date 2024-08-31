@@ -233,16 +233,16 @@ input[type="checkbox"]:checked::before {
   display: flex;
   align-items: center;
 }
-.filtroContainer .filtro-control:nth-child(3) input:checked{
+.filtroContainer .filtro-control:nth-child(4) input:checked{
   border-color: black;
 }
-.filtroContainer .filtro-control:nth-child(4) input:checked{
+.filtroContainer .filtro-control:nth-child(5) input:checked{
   border-color: blue;
 }
-.filtroContainer .filtro-control:nth-child(5) input:checked{
+.filtroContainer .filtro-control:nth-child(6) input:checked{
   border-color: yellow;
 }
-.filtroContainer .filtro-control:nth-child(6) input:checked{
+.filtroContainer .filtro-control:nth-child(7) input:checked{
   border-color: green;
 }
 .filtroContainer #openFiltro{
