@@ -19,7 +19,7 @@
   z-index: 10000;
 }
 .pesquisa:focus {
-  box-shadow: 0 0 5px var(--buttons-color);
+  box-shadow: 0 0 10px var(--buttons-color);
   background: var(--background-2);
   color: var(--font-color-2);
 }
@@ -137,7 +137,14 @@ h1.title {
 .card .conteudo p span.status.status-corrigido {
   color: green;
 }
-
+.card .conteudo .dataHoraCad{
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-weight: 600;
+  color: var(--color-error);
+  font-size: .7rem;
+}
 
 .card.cadastrada{
   border: 3px solid black;

@@ -1,3 +1,14 @@
+@media screen and (max-width: 345px) {
+  .card .buttons-container button{
+    font-size: 50%;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .card .buttons-container button{
+    font-size: 70%;
+  }
+}
 @media screen and (max-width: 433px) {
   #demandas-container {
     width: 98%;
