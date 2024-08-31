@@ -189,3 +189,54 @@ h1.title {
   background: var(--background-error);
   border: 2px solid var(--border-error);
 }
+
+.filtroContainer{
+  position: absolute;
+  top: 100px;
+  left: 10px;
+  width: fit-content;
+  height: fit-content;
+  color: var(--font-color);
+  font-weight: 500;
+  border: 2px solid var(--buttons-color);
+  padding: 10px;
+}
+.filtroContainer .filtro-control{
+  display: flex;
+  padding: 5px;
+  gap: 5px;
+}
+.filtroContainer .filtro-control input[type="checkbox"]{
+  width: 25px;
+  height: 25px;
+  outline: none;
+  border: 2px solid var(--buttons-color);
+  border-radius: 5px;
+  appearance: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+input[type="checkbox"]:checked::before {
+  width: 100%;
+  height: 100%;
+  content: "X";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--buttons-color);
+  font-weight: 800;
+}
+.filtroContainer .filtro-control:nth-child(3) input:checked{
+  border-color: black;
+}
+.filtroContainer .filtro-control:nth-child(4) input:checked{
+  border-color: blue;
+}
+.filtroContainer .filtro-control:nth-child(5) input:checked{
+  border-color: yellow;
+}
+.filtroContainer .filtro-control:nth-child(6) input:checked{
+  border-color: green;
+}

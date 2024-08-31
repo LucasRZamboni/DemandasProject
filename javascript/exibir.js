@@ -114,6 +114,8 @@ export async function fetchDemandas() {
           `;
         demandasContainer.appendChild(card);
       }
+
+      updateCounters();
       // Adiciona event listeners aos botões de edição e exclusão
       document.querySelectorAll(".edit-status-btn").forEach((button) => {
         button.addEventListener("click", handleEditStatusClick);

@@ -25,6 +25,30 @@
 
       <p id="edit-message" class=""></p>
 
+      <div class="filtroContainer">
+        <h4>Filtro</h4>
+        <div class="filtro-control">
+          <input type="checkbox" name="todos" id="filtroTodos" checked/>
+          <p>Todos (<span id="contadorTodos"></span>)</p> 
+        </div>
+        <div class="filtro-control">
+          <input type="checkbox" name="cadastrado" id="filtroCadastrado" />
+          <p>Cadastrado  (<span id="contadorCadastrado"></span>)</p>
+        </div>
+        <div class="filtro-control">
+          <input type="checkbox" name="enviado" id="filtroEnviado" />
+          <p>Enviado  (<span id="contadorEnviado"></span>)</p>
+        </div>
+        <div class="filtro-control">
+          <input type="checkbox" name="verificando" id="filtroVerificando" />
+          <p>Verificando  (<span id="contadorVerificando"></span>)</p>
+        </div>
+        <div class="filtro-control">
+          <input type="checkbox" name="corrigido" id="filtroCorrigido" />
+          <p>Corrigido  (<span id="contadorCorrigido"></span>)</p>
+        </div>
+      </div>
+
       <div id="demandas-container"></div>
 
       <!-- Modal para edição de status -->
@@ -99,5 +123,6 @@
       </div>
     </div>
     <script type="module" src="javascript/exibir.js"></script>
+    <script src="javascript/filtro.js"></script>
   </body>
 </html>
